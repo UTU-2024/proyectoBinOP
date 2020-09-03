@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 echo "opciones"
 #ToDo menu principal
 echo "1. menu principal"
