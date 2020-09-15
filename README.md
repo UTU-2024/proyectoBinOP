@@ -1,2 +1,1 @@
-# ProyectoBinOP
-# aqui yace nuestro repositorio de trabajo que cuenta con las actualizaciones de codigo para brindar soporte y reparar errores
+#Somos ProyectoBinOP, hemos decidido usar las licencias GPLv2 y nuestro Mail es binopserviciotecnico@gmail.com
