@@ -1,1 +1,5 @@
-Este es un archivo de prueba, git funcionando en terminal.
+Este es un archivo de prueba, git funcionando en terminal
+
+modificando archivo-Paola
+
+
