@@ -67,12 +67,37 @@ select opt in $OPCIONES; do
 		done
 	fi
 	if [ "$opt" = "APP" ]; then
-		echo "Entrando en Reservas..."
- 		SQLHOST=$1
-		SQLUSER=$2
-		TABLE=$3
-		echo "Ingrese password para $SQLUSER"
-		mysql -h $SQLHOST -u $SQLUSER -p -e "use Hotel;" -e "select * from $TABLE;"	
+		ACCION="RESERVAS TRASLADOS"
+		select opt in $ACCION; do
+			if [ "$opt" = "RESERVAS" ]; then
+				if [ -z "$3" ]; then
+					echo "Faltan parametros o los datos brindados son incorrectos"
+					echo "Uso: $0 + mysqluser-host mysqluser-name table-name"
+				exit
+				fi
+				echo "Entrando en Reservas..."
+ 				SQLHOST=$1
+				SQLUSER=$2
+				TABLE=$3
+				echo "Ingrese password para $SQLUSER"
+				mysql -h $SQLHOST -u $SQLUSER -p -e "use Hotel;" -e "select * from $TABLE;"
+				exit
+			fi
+			if [ "$opt" = "TRASLADOS" ]; then
+				if [ -z "$3" ]; then 
+					echo "Faltan parametros o los datos brindados son incorrectos"
+					echo "Uso: $0 + mysqluser-host mysqluser-name table-name"
+				exit
+				fi
+				echo "Entrando en traslados"
+				SQLHOST=$1
+				SQLUSER=$2
+				TABLE=$3
+				echo "Ingrese password para $SQLUSER"
+				mysql -h $SQLHOST -u $SQLUSER -p -e "use Hotel;" -e "select * from $TABLE"
+				exit
+			fi
+		done
 	exit
 	fi
 done
