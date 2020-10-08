@@ -35,7 +35,7 @@ select opt in $OPCIONES; do
 			if [ "$opt" = "CREATE-USER" ]; then
 				if [ -z "$5" ]; then
 					echo "Faltan parametros"
-					echo "Uso: $0 + mysqluser-con-el-que-ingresamos-a-DB mysqluser-host useradd useradd-host useradd-password"
+					echo "Uso: $0 + mysqluser-host mysqluser-con-el-que-ingresamos-a-DB useradd useradd-host useradd-password"
 				exit
 				fi
 				echo "Creating user..."
@@ -65,6 +65,15 @@ select opt in $OPCIONES; do
 			exit
 			fi
 		done
+	fi
+	if [ "$opt" = "APP" ]; then
+		echo "Entrando en Reservas..."
+ 		SQLHOST=$1
+		SQLUSER=$2
+		TABLE=$3
+		echo "Ingrese password para $SQLUSER"
+		mysql -h $SQLHOST -u $SQLUSER -p -e "use Hotel;" -e "select * from $TABLE;"	
+	exit
 	fi
 done
 
