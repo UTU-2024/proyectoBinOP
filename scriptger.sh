@@ -1,9 +1,5 @@
 #!/bin/bash
-			read -p "Ingrese usuario: " DB_USER
-			read -sp "Ingrese password: " DB_USER_PSSWD
-			read -p "Ingrese host: " DB_HOST
-
-OPCIONES="RESERVAS TRASLADOS HABITACIONES"
+			OPCIONES="RESERVAS TRASLADOS HABITACIONES"
 	select opt in $OPCIONES; do
 	if [ "$opt" = "RESERVAS" ]; then
 			ACCION="INGRESAR MODIFICAR CONSULTAR"
@@ -15,26 +11,26 @@ OPCIONES="RESERVAS TRASLADOS HABITACIONES"
 				read -p "Ingrese año de la reserva: " BOOK_YEAR
 				read -p "Ingrese mes de la reserva: " BOOK_MONTH
 				read -p "Ingrese día de la reserva: " BOOK_DAY
-				mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD -e "use Hotel;" -e "insert into Reservas (Tipo_de_Habitacion, Nombre, Cantidad_de_mascotas, Dia_de_la_reserva) values ('$ROOM_KIND', '$NAME_BOOK', $PETS, '$BOOK_YEAR-$BOOK_MONTH-$BOOK_DAY');"
+				ingresar_reserva=$(mysql -h localhost -u fakearch -p --database Hotel -e "insert into Reservas (Tipo_de_Habitacion, Nombre, Cantidad_de_mascotas, Dia_de_la_reserva) values ('$ROOM_KIND', '$NAME_BOOK', $PETS, '$BOOK_YEAR-$BOOK_MONTH-$BOOK_DAY');")
 				exit
 			fi
 			if [ "$opt" = "MODIFICAR" ]; then
-				mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD -e "use Hotel;" -e "select * from Reservas where Dia_de_la_reserva >= curdate();"
+				
 				read -p "Ingrese la columna que quiere modificar: " COLUMN
 				read -p "Ingrese el dato correcto: " COLUMN_INFO
 				read -p "Ingrese ID de la reserva: " ID
-				mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD -e "use Hotel;" -e "update Reservas set $COLUMN = '$COLUMN_INFO' where ID = '$ID' "
+				modificar_reserva=$(mysql -h localhost -u fakearch -p --database Hotel -e "update Reservas set $COLUMN = '$COLUMN_INFO' where ID = '$ID' ")
 				exit       
 			fi
 			if [ "$opt" = CONSULTAR ]; then
 					ACCIONES="CONSULTAR-HOY CONSULTAR-TODO"
 					select opt in $ACCIONES; do
 						if [ "$opt" = "CONSULTAR-HOY" ]; then
-							mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD  -e "use Hotel;" -e "select * from Reservas where Dia_de_la_reserva = curdate();"
+							consultar_hoy_reserva=$(mysql -h localhost -u fakearch -p --database Hotel -e "select * from Reservas where Dia_de_la_reserva = curdate();")
 							exit
 						fi
 						if [ "$opt" = "CONSULTAR-TODO" ]; then 
-								mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD -e "use Hotel;" -e "select * from Reservas;"
+								consultar_todo_reserva=$(_mysql -h localhost -u fakearch -p --database Hotel -e "select * from Reservas;")
 								exit
 						fi
 			done
@@ -47,7 +43,7 @@ OPCIONES="RESERVAS TRASLADOS HABITACIONES"
 			ACCION="VER-TRASLADOS MODIFICAR-HORARIOS"
 			select opt in $ACCION; do
 				if [ "$opt" = "VER-TRASLADOS" ]; then 
-						mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD  -e "use Hotel;" -e "select * from Traslados;"
+						ver_traslados=$(mysql -h localhost -u fakearch -p --database Hotel -e "select * from Traslados;")
 						exit
 				fi
 				if [ "$opt" = "MODIFICAR-HORARIOS" ]; then
@@ -61,7 +57,7 @@ OPCIONES="RESERVAS TRASLADOS HABITACIONES"
 									read -p "Ingrese los minutos: " TIME_MINUTES
 									read -p "Ingrese los segundos: " TIME_SECONDS
 									read -p "Ingrese el dia para el que aplicará el cambio: " DAY
-									mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD -e "use Hotel;" -e "update Traslados set $TURNO = '$TIME_HOURS:$TIME_MINUTES:$TIME_SECONDS' where Días = '$DAY'"
+									horario_traslado=$(mysql -h localhost -u fakearch -p --database Hotel -e "update Traslados set $TURNO = '$TIME_HOURS:$TIME_MINUTES:$TIME_SECONDS' where Días = '$DAY'")
 									exit
 							fi
 							if [ "$opt" = "ELIMINAR-TRASLADO" ]; then 
@@ -69,7 +65,7 @@ OPCIONES="RESERVAS TRASLADOS HABITACIONES"
 									echo "Los datos no se podran recuperar"
 									read -p "Seguro que desea eliminar? y/n " CONFIRM		
 									if [ "$CONFIRM" = "y" ]; then
-										mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD -e "use Hotel;" -e "delete from Traslados where Días = '$DAY' "	
+										eliminar_traslados=$(mysql -h localhost -u fakearch -p -e "delete from Traslados where Días = '$DAY' "	)
 										echo "Se ha eliminado correctamente"
 										exit
 									fi
@@ -86,10 +82,9 @@ OPCIONES="RESERVAS TRASLADOS HABITACIONES"
 		exit
 	fi
 	if [ "$opt" = "HABITACIONES" ]; then
-		mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD -e "use Hotel;" -e "select * from Habitaciones;"
 		read -p "Ingrese el ID para el que aplicará el cambio de precio (solo un ID posible por accion): " ID
 		read -p "Ingrese nuevo precio: " PRICE
-		mysql -h $DB_HOST -u $DB_USER -p$DB_USER_PSSWD -e "use Hotel;" -e "update Habitaciones set Precio_por_dia_USD$ = $PRICE where ID = $ID"
+		habitaciones=$(mysql -h localhost -u fakearch -p -e "update Habitaciones set Precio_por_dia_USD$ = $PRICE where ID = $ID")
 		exit	
 	fi
 	done
