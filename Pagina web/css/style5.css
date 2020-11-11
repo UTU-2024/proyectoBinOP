@@ -1,0 +1,1349 @@
+/*rooms stylesheet*/
+body, html{
+	height: 100%;
+	width: 100%;
+	margin: 0%;
+	background: #f8f4cf
+}
+/*Comienza header*/
+.header{
+	background-color: #fe8745;
+	width: 100%;
+	height: 150px;
+	/*border-style: solid;
+	border-color: transparent;*/
+} 
+
+.content-header{
+	width: 100%;
+	height: 150px;
+	margin: 0% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	/*border-style: solid;
+	border-color: transparent;*/
+}
+.logo{
+	border-style: solid;
+	border-color: transparent;
+	width: 40%;
+	margin: 0% 0% 0% 30%;
+    padding: 0% 0% 0% 0%;
+}
+.logo-header{
+	margin: -11% 0% 0% 25%;
+    padding: 0% 0% 0% 0%;
+    border-style: solid;
+    border-color: transparent;
+    display: flex;
+}
+
+.name1{
+	font-family: 'Times New Roman';
+	font-size: 150%;
+	margin: 6% 0% 0% 2.5%;
+	padding: 0% 0% 0% 0%;
+	width: 19.5%;
+	color: #131315;
+	border-style: solid;
+	border-color: transparent;
+}
+
+.name2{
+	font-family: 'Times New Roman';
+	font-size: 150%;
+	margin: -9% 0% 0% 45%;
+	padding: 0% 0% 0% 0%;
+	width: 54%;
+	color: #131315;
+	border-style: solid;
+	border-color: transparent;
+}
+
+.social{
+	border-style: solid;
+	border-color: transparent;
+	margin: -4.2% 0% 0% 89%;
+	padding: 0% 0% 0% 0%;
+	width: 10%;
+}
+
+.fb{
+	border-style: solid;
+	border-color: transparent;
+	margin: 0% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	display: inline-flex;
+}
+
+.ig{
+	border-style: solid;
+	border-color: transparent;
+	margin: 0% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	display: inline-flex;
+}
+
+.tw{
+	border-style: solid;
+	border-color: transparent;
+	margin: 0% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	display: inline-flex;
+}
+
+.yt{
+	border-style: solid;
+	border-color: transparent;
+	margin: 0% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	display: inline-flex;
+}
+
+.menu{
+	/*border-style: solid;
+	border-color: transparent;*/
+	width: 100%;
+	height: 45px;
+	background-color: #131315;
+
+}
+
+.content-menu{
+	border-style: solid;
+	border-color: transparent;
+	width: 40%;
+	margin: 0% 0% 0% 32%;
+	padding: 0% 0% 0% 0%;
+
+}
+
+.tabla{
+	border-style: solid;
+	border-color: transparent;
+	width: 100%;
+}
+
+.tabla-footer{
+	border-style: solid;
+	border-color: transparent;
+	width: 100%;
+}
+
+.tabla2{
+	border-style: solid;
+	border-color: transparent;
+	width: 100%;
+}
+
+.opt{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: 0% 2% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt1{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: -8% 2% 0% 10%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt2{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: -8% 2% 0% 5%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt3{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: -8% 2% 0% 5%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt4{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: -8% 2% 0% 5%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt5{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: 9% 2% 0% -75%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt6{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: 9% 0% 0% 4%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt7{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: -9% 0% 0% 63%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.button {
+	text-decoration: none;
+	color: #f8f4cf;
+    background-color: none;
+ 	
+}
+
+ .button:hover {
+    color: #fe8745;
+    background-color: none;
+
+}
+
+
+/*Termina header*/
+/*Comienza contenido de la pagina*/
+.rooms{
+	/*/*border-style: dashed;
+	border-color: blue;*/
+	margin: 0% 1% 0% 1%;
+	padding: 0% 0% 0% 0%;
+	width: 98%;
+	display: block;
+
+}
+
+.titulo{
+	border-style: solid;
+	border-color: #131315;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-width: 0.01px;
+	font-family: 'Times New Roman';
+	font-size: 250%;
+	color: #131315;
+	margin: 0% 0% 0% 0%;
+	padding: 3% 0% 2% 0%;
+
+}
+
+.habitaciones{
+	border-style: solid;
+	border-color: #131315;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-width: 0.01px;
+	font-family: 'Times New Roman';
+	font-size: 200%;
+	color: #131315;
+	margin: 0% 0% 0% 0%;
+	padding: 2% 0% 1% 0%;
+
+}
+
+.img-habitaciones{
+	margin: 2% 0% 0% 0%;
+	padding: 0%;
+	border-style: solid;
+	border-color: transparent;
+}
+
+.habitaciones-info{
+	border-style: solid;
+	border-color: transparent;
+	font-family: 'Times New Roman';
+	font-size: 125%;
+	margin: 2% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	color: #131315;
+}
+/*Termina contenido de la pagina*/
+/*Comienza footer*/
+.footer{
+	background-color: #131315;
+	width: 100%;
+	height: 200px;
+	/*border-style: solid;
+	border-color: transparent;*/
+	margin: 3% 0% 0% 0%;
+	padding: 0%;
+}
+
+.content-footer{
+	/*border-style: solid;
+	border-color: transparent;*/
+	width: 40%;
+	height: 197px;
+	margin: 0% 0% 0% 32%;
+	padding: 0% 0% 0% 0%;
+}
+
+.opt1-footer{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: 15% 0% 0% 60%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	width: 40%;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt2-footer{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: 10% 0% 0% 23%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt3-footer{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: 15% 0% 0% -19%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.opt4-footer{
+	font-family: 'Times New Roman';
+	font-size: 110%;
+	margin: 15% 0% 0% -45%;
+	padding: 0% 0% 0% 0%;
+	border-style: solid;
+	border-color: transparent;
+	color: #f8f4cf;
+	display: inline-block;
+}
+
+.footer-info1{
+	font-family: 'Times New Roman';
+	border-style: solid;
+	border-color: transparent;
+	margin: 2% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	color: white;
+}
+
+.footer-info2{
+	font-family: 'Times New Roman';
+	border-style: solid;
+	border-color: transparent;
+	margin: 1% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	color: white;
+}
+
+.footer-info3{
+	font-family: 'Times New Roman';
+	border-style: solid;
+	border-color: transparent;
+	margin: 2.8% 0% 0% 0%;
+	padding: 0% 0% 0% 23.2%;
+
+	color: white;
+}
+
+.footer-mail{
+	text-decoration: none;
+	color: #fe8745;
+}
+/*Termina footer*/
+/*Termina pagina*/
+/*Comienzan media queries*/
+@media screen and (max-width: 5000px) {
+	body, html {
+	/*background-color: transparent;*/
+}
+
+
+
+.tabla2{
+	display: none;
+}
+}
+
+@media screen and (max-width: 1815px) {
+body, html {
+	/*background-color: transparent;*/
+}
+
+
+
+.opt1-footer{
+	width: 50%;
+}
+}
+
+@media screen and (max-width: 1764px) {
+body, html {
+	/*background-color: transparent;*/
+}
+
+
+
+.name1{
+	width: 30%;
+}
+
+.name2{
+	margin: -10.4% 0% 0% 45%;
+	width: 60%;
+}
+
+.logo-header{
+    width: 18%;
+}
+}
+
+@media screen and (max-width: 1717px) {
+body, html {
+	/*background-color: transparent;*/
+}
+
+
+
+.name2{
+	margin: -10.7% 0% 0% 45%;
+	width: 60%;
+}
+}
+
+
+@media screen and (max-width: 1647px) {
+body, html {
+	/*background-color: transparent;*/
+}
+
+
+
+.name2{
+	margin: -11.2% 0% 0% 45%;
+}
+}
+
+
+@media screen and (max-width: 1599px) {
+body, html {
+	/*background-color: blue;*/
+}
+
+
+
+.logo{
+	margin: 0% 0% 0% 25%;
+}
+
+.name2{
+	margin: -11.5% 0% 0% 45%;
+}
+
+.content-menu{
+	margin: 0% 0% 0% 27%;
+}
+}
+
+@media screen and (max-width: 1589px) {
+body, html {
+	/*background-color: green;*/
+}
+
+.logo{
+	margin: 0% 0% 0% 25%;
+	width: 50%;
+	height: 120px;
+}
+
+.logo-header{
+    width: 16%;
+    margin: -10% 0% 0% 25%;
+}
+
+.name1{
+	font-size: 140%;
+	margin: 6% 0% 0% 6%;
+}
+
+.name2{
+	font-size: 140%;
+	margin: -8.6% 0% 0% 44%;
+	width: 55%;
+}
+}
+
+@media screen and (max-width: 1549px) {
+body, html {
+	/*background-color: grey;*/
+}
+
+.logo{
+	margin: 0% 0% 0% 20%;
+	width: 50%;
+	height: 120px;
+}
+
+.content-menu{
+	margin: 0% 0% 0% 24%;
+	width: 45%;
+}
+
+
+}
+
+@media screen and (max-width: 1515px) {
+body, html {
+	/*background-color: violet;*/
+}
+
+
+}
+
+@media screen and (max-width: 1498px) {
+body, html {
+	/*background-color: skyblue;*/
+}
+
+.name1{
+	font-size: 140%;
+	margin: 6% 0% 0% 5%;
+}
+
+.name2{
+	font-size: 140%;
+	margin: -9.1% 0% 0% 44%;
+	width: 55%;
+}
+
+
+}
+
+@media screen and (max-width: 1495px) {
+body, html {
+	/*background-color: purple;*/
+}
+
+.social{
+	margin: -5% 0% 0% 89%;
+}
+
+
+
+.opt1-footer{
+	margin: 15% 0% 0% 60%;
+	width: 70%;
+}
+
+.opt2-footer{
+	margin: 10% 0% 0% 23%;
+	width: 70%;
+}
+
+.opt3-footer{
+	margin: 15% 0% 0% -19%;
+	width: 70%;
+}
+
+.opt4-footer{
+	margin: 15% 0% 0% -45%;
+	width: 70%;
+}
+}
+
+@media screen and (max-width: 1389px) {
+body, html {
+	/*background-color: green;*/
+}
+
+.logo-header{
+    width: 18%;
+    margin: -11.5% 0% 0% 25%;
+}
+.name1{
+	font-size: 140%;
+	margin: 6% 0% 0% 3%;
+}
+
+.name2{
+	font-size: 140%;
+	margin: -9.8% 0% 0% 46%;
+	width: 55%;
+}
+
+.social{
+	margin: -5.5% 0% 0% 87%;
+}
+
+.content-menu{
+	margin: 0% 0% 0% 23%;
+	width: 50%;
+}
+
+
+
+.opt1-footer{
+	margin: 15% 0% 0% 40%;
+	width: 70%;
+}
+
+.opt2-footer{
+	margin: 10% 0% 0% 6%;
+	width: 70%;
+}
+
+.opt3-footer{
+	margin: 15% 0% 0% -36%;
+	width: 70%;
+}
+
+.opt4-footer{
+	margin: 15% 0% 0% -68%;
+	width: 70%;
+}
+
+.footer-info3{
+	padding: 0% 0% 0% 12%;
+}
+}
+
+
+@media screen and (max-width: 1330px) {
+body, html {
+	/*background-color: blue;*/
+}
+
+.name2{
+	margin: -10% 0% 0% 46%;
+	width: 70%;
+}
+
+.opt1-footer{
+	margin: 15% 0% 0% 20%;
+	width: 70%;
+}
+
+.opt2-footer{
+	margin: 10% 0% 0% 10%;
+	width: 70%;
+}
+
+.opt3-footer{
+	margin: 14.5% 0% 0% 0%;
+	width: 70%;
+}
+
+.opt4-footer{
+	margin: 15% 0% 0% -2%;
+	width: 70%;
+}
+}
+
+@media screen and (max-width: 1301px) {
+body, html {
+	/*background-color: yellow;*/
+}
+
+.social{
+	margin: -6% 0% 0% 85%;
+	width: 13%;
+}
+
+
+}
+
+@media screen and (max-width: 1290px) {
+body, html {
+	/*background-color: red;*/
+}
+
+.name1{
+	margin: 6% 0% 0% 2%;
+}
+
+.name2{
+	margin: -10.5% 0% 0% 46%;
+	width: 70%;
+}
+
+.img-habitaciones{
+	height: 700px;
+}
+}
+
+@media screen and (max-width: 1242px) {
+body, html {
+	/*background-color: brown;*/
+}
+
+.name1{
+	margin: 6% 0% 0% 1%;
+}
+
+
+
+.content-menu{
+	width: 70%;
+	margin: 0% 0% 0% 20%;
+}
+
+
+
+.footer-info3{
+	margin: 6% 0% 0% 0%;
+	padding: 0% 0% 0% 10%;
+}
+}
+
+@media screen and (max-width: 1242px) {
+body, html {
+	/*background-color: crimson;*/
+}
+
+
+
+.logo-header{
+	width: 20%;
+}
+
+.name1{
+	margin: 6% 0% 0% 2%;
+	font-size: 130%;
+}
+
+.name2{
+	margin: -12% 0% 0% 46%;
+	font-size: 130%;
+	width: 70%;
+}
+
+.social{
+	margin: -7% 0% 0% 85%;
+}
+}
+
+@media screen and (max-width: 1166px) {
+body, html {
+	/*background-color: grey;*/
+}
+
+.logo{
+	margin: 0% 0% 0% 15%;
+	width: 55%;
+}
+
+.logo-header{
+	margin: -11% 0% 0% 25%;
+}
+.name1{
+	margin: 6% 0% 0% 0%;
+}
+
+.name2{
+	margin: -11% 0% 0% 50%;
+	width: 60%;
+}
+.social{
+	margin: -7.1% 0% 0% 83%;
+	width: 15%;
+}
+
+.content-menu{
+	margin: 0% 0% 0% 15%;
+}
+}
+
+@media screen and (max-width: 1107px) {
+body, html {
+	/*background-color:	red;*/
+}
+
+.name2{
+	margin: -12% 0% 0% 50%;
+	width: 60%;
+}
+
+.social{
+	margin: -7.5% 0% 0% 83%;
+	width: 15%;
+}
+
+.footer-info3{
+	margin: 7% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	text-align: center;
+}
+}
+
+@media screen and (max-width: 1072px) {
+body, html {
+	/*background-color: skyblue;*/
+}
+
+.logo-header{
+	margin: -14% 0% 0% 25%;
+	width: 25%;
+}
+
+.name2{
+	margin: -12.5% 0% 0% 55%;
+	width: 60%;
+}
+
+.opt1-footer{
+	margin: 15% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	width: 100%;
+}
+
+.opt2-footer{
+	margin: 10% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	width: 100%;
+}
+
+.opt3-footer{
+	margin: 15% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	width: 100%;
+}
+
+.opt4-footer{
+	margin: 14% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	width: 100%;
+}
+}
+
+@media screen and (max-width: 1053px) {
+body, html {
+	/*background-color: yellow;*/
+}
+
+.presentacion{
+	margin: 0% 1% 0% 1%;
+	padding: 0% 0% 0% 0%;
+	width: 98%;
+	display: inline-block;
+
+}
+
+.content-footer{
+	width: 50%;
+	height: 197px;
+	margin: 0% 0% 0% 25%;
+	padding: 0% 0% 0% 0%;
+}
+
+.footer-info3{
+	margin: 5% 0% 0% 0%;
+	padding: 0% 0% 0% 0%;
+	text-align: center;
+}
+}
+
+@media screen and (max-width: 1008px) {
+body, html {
+	/*background-color: orange;*/
+}
+
+.logo{
+	margin: 0% 0% 0% 10%;
+	width: 55%;
+}
+.name1{
+	margin: 6% 0% 0% 0%;
+		font-size: 120%;
+}
+
+.name2{
+	margin: -12.5% 0% 0% 54%;
+	width: 60%;
+	font-size: 120%;
+}
+
+.logo-header{
+	margin: -13% 0% 0% 25%;
+	width: 23%;
+}
+
+.social{
+	border-style: solid;
+	border-color: transparent;
+	margin: -8.7% 0% 0% 82%;
+	padding: 0% 0% 0% 0%;
+}
+
+.content-menu{
+	margin: 0% 0% 0% 10%;
+	padding: 0% 0% 0% 0%;
+
+}
+
+.img-habitaciones{
+	height: 600px;
+}
+}
+
+@media screen and (max-width: 933px) {
+body, html {
+	/*background-color:	purple;*/
+}
+
+.logo{
+	width: 70%;
+	margin: 0% 0% 0% 10%;
+    padding: 0% 0% 0% 0%;
+}
+.logo-header{
+	margin: -10.8% 0% 0% 20%;
+    padding: 0% 0% 0% 0%;
+    width: 20%;
+}
+.name2{
+	margin: -11% 0% 0% 43%;
+	padding: 0% 0% 0% 0%;
+	width: 54%;
+}
+}
+
+@media screen and (max-width: 891px) {
+body, html {
+	/*background-color: green;*/
+}
+
+.logo{
+	width: 75%;
+	margin: 0% 0% 0% 5%;
+    padding: 0% 0% 0% 0%;
+}
+.logo-header{
+	margin: -10.8% 0% 0% 20%;
+    padding: 0% 0% 0% 0%;
+    width: 20%;
+}
+
+.content-menu{
+	width: 90%;
+	margin: 0% 0% 0% 7%;
+	padding: 0% 0% 0% 0%;
+}
+
+.name2{
+	margin: -10.5% 0% 0% 43%;
+	padding: 0% 0% 0% 0%;
+	width: 54%;
+}
+
+.footer{
+	height: 210px;
+}
+
+.content-footer{
+	width: 70%;
+	height: 205px;
+	margin: 0% 0% 0% 15%;
+}
+
+.img-habitaciones{
+	height: 550px;
+}
+}
+
+@media screen and (max-width: 873px) {
+body, html {
+	/*background-color: blue;*/
+}
+
+.logo{
+	width: 75%;
+	margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+}
+
+.social{
+	margin: -8.7% 0% 0% 80%;
+	padding: 0% 0% 0% 0%;
+	width: 17%;
+}
+.content-menu{
+	width: 90%;
+	margin: 0% 0% 0% 2%;
+	padding: 0% 0% 0% 0%;
+}
+.name2{
+	margin: -11% 0% 0% 43%;
+	padding: 0% 0% 0% 0%;
+	width: 54%;
+}
+}
+
+@media screen and (max-width: 789px) {
+body, html {
+	/*background-color: crimson;*/
+}
+
+.name1{
+	font-size: 110%;
+	margin: 6% 0% 0% 0%;
+	width: 19.5%;
+}
+
+.name2{
+	font-size: 110%;
+	margin: -11% 0% 0% 43%;
+}
+
+.social{
+	margin: -10.5% 0% 0% 80%;
+}
+
+.img-habitaciones{
+	height: 500px;
+}
+}
+
+@media screen and (max-width: 772px) {
+body, html {
+	/*background-color: grey;*/
+}
+
+.logo{
+	width: 100%;
+	margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+}
+
+.logo-header{
+	margin: -11% 0% 0% 21.5%;
+	width: 20%;
+
+}
+
+
+.social{
+	margin: -16% 0% 0% 75%;
+	width: 20%;
+}
+
+.name1{
+	font-size: 110%;
+	margin: 6% 0% 0% 0%;
+	width: 19.5%;
+}
+
+.name2{
+	font-size: 110%;
+	margin: -9% 0% 0% 43%;
+}
+}
+
+@media screen and (max-width: 733px) {
+body, html {
+	/*background-color: blue;*/
+}
+.social{
+	margin: -16.8% 0% 0% 75%;
+	width: 20%;
+}
+}
+
+@media screen and (max-width: 700px) {
+body, html {
+	/*background-color: red;*/
+}
+
+.social{
+	margin: -18% 0% 0% 75%;
+	width: 20%;
+}
+
+.logo-header{
+	margin: -10.5% 0% 0% 18%;
+	width: 18%;
+}
+
+.name1{
+	margin: 7% 0% 0% 0%;
+}
+
+.name2{
+	margin: -9.5% 0% 0% 40%;
+}
+
+.content-menu{
+	width: 100%;
+	margin: 0%;
+}
+}
+
+@media screen and (max-width: 658px) {
+body, html {
+	/*background-color: skyblue;*/
+}
+
+.social{
+	margin: -19% 0% 0% 71%;
+	width: 23%;
+}
+
+.logo-header{
+	margin: -10.5% 0% 0% 18.5%;
+}
+
+.name2{
+	margin: -9.5% 0% 0% 40%;
+}
+}
+
+@media screen and (max-width: 629px) {
+body, html {
+	/*background-color: orange;*/
+}
+
+.social{
+	margin: -20% 0% 0% 71%;
+	width: 23%;
+}
+
+.name1{
+	margin: 9% 0% 0% 0%;
+}
+
+.name2{
+	margin: -10% 0% 0% 40%;
+}
+
+.tabla{
+	display: none;
+}
+
+.tabla2{
+	display: block;
+	height: 93px;
+}
+
+.menu{
+	height: 100px;
+
+}
+
+.content-menu{
+	height: 94px;
+}
+
+.img-habitaciones{
+	height: 400px;
+}
+}
+
+@media screen and (max-width: 575px) {
+body, html {
+	/*background-color: violet;*/
+}
+
+.name1{
+	margin: 5% 0% 0% 25%;
+	font-size: 100%;
+}
+.name2{
+	margin: -6% 0% 0% 25%;
+	font-size: 100%;
+}
+
+.logo-header{
+	margin: -8% 0% 0% 2%;
+	width: 20%;
+}
+.social{
+	margin: -21% 0% 0% 71%;
+	width: 26%;
+}
+
+.img-habitaciones{
+	height: 350px;
+}
+}
+
+@media screen and (max-width: 511px) {
+body, html {
+	/*background-color: yellow;*/
+}
+
+.logo-header{
+	margin: -8% 0% 0% 1%;
+	width: 22%;
+}
+
+.social{
+	margin: -23% 0% 0% 65%;
+	width: 29%;
+}
+
+.footer{
+	width: 100%;
+	height: 220px;
+	margin: 3% 0% 0% 0%;
+}
+
+.content-footer{
+	width: 100%;
+	height: 215px;
+	margin: 0% 0% 0% 0%;
+}
+
+.opt1-footer{
+	text-align: center;
+}
+
+.opt2-footer{
+	text-align: center;
+}
+
+.opt3-footer{
+	text-align: center;
+}
+
+.opt4-footer{
+	text-align: center;
+}
+
+.footer-info1{
+	text-align: center;
+}
+
+.footer-info2{
+	text-align: center;
+}
+}
+
+@media screen and (max-width: 500px) {
+body, html {
+	/*background-color: purple;*/
+}
+
+.name2{
+	width: 72%;
+}
+
+.opt1{
+	margin: 1.5% 2% 0% 5%;
+}
+
+.opt2{
+	margin: 1.5% 2% 0% 5%;
+}
+
+.opt3{
+	margin: 1.5% 2% 0% 5%;
+}
+
+.opt4{
+	margin: 1.5% 2% 0% 5%;
+}
+
+.opt5{
+	margin: 2% 2% 0% 12%;
+}
+
+.opt6{
+	margin: 2% 2% 0% 3%;
+}
+
+.opt7{
+	margin: 3% 2% 0% 10%;
+}
+}
+
+@media screen and (max-width: 459px) {
+body, html {
+	/*background-color: blue;*/
+}
+
+.logo-header{
+	margin: -8% 0% 0% 1%;
+	width: 24%;
+}
+
+.name1{
+	margin: 5% 0% 0% 27%;
+	width: 30%;
+}
+
+.name2{
+	margin: -8% 0% 0% 27%;
+}
+
+.social{
+	margin: -27.5% 0% 0% 67%;
+	width: 30%;
+}
+
+.titulo{
+	text-align: center;
+}
+
+.habitaciones{
+	text-align: center;
+}
+
+.footer-info1{
+	margin: 3% 0% 0% 0%;
+}
+
+.footer-info2{
+	margin: 2% 0% 0% 0%;
+}
+
+.footer-info3{
+	margin: 8% 0% 0% 0%;
+}
+
+.img-habitaciones{
+	height: 350px;
+}
+}
+/*Terminan media queries*/
