@@ -1244,7 +1244,7 @@ body, html {
 
 @media screen and (max-width: 1008px) {
 body, html {
-	/*background-color: transparent;*/
+	/*background-color: red;*/
 }
 
 .logo{
@@ -1291,7 +1291,7 @@ body, html {
 
 @media screen and (max-width: 933px) {
 body, html {
-	/*background-color: transparent;*/
+	/*background-color: green;*/
 }
 
 .logo{
@@ -1311,7 +1311,7 @@ body, html {
 }
 
 .geo{
-	margin: 0% 0% 0% 7%;
+	margin: 1% 0% 0% 7%;
 	padding: 0% 0% 0% 0%;
 	width: 86%;
 	height: 500px;
@@ -1340,7 +1340,7 @@ body, html {
 
 @media screen and (max-width: 891px) {
 body, html {
-	/*background-color: transparent;*/
+	/*background-color: violet;*/
 }
 
 .logo{
@@ -1387,7 +1387,7 @@ body, html {
 
 @media screen and (max-width: 873px) {
 body, html {
-	/*background-color: transparent;*/
+	/*background-color: blue;*/
 }
 
 .logo{
@@ -1413,7 +1413,7 @@ body, html {
 }
 
 .geo{
-	margin: 0% 0% 0% 3%;
+	margin: 1% 0% 0% 3%;
 	padding: 0% 0% 0% 0%;
 	width: 95%;
 	height: 500px;
@@ -1584,7 +1584,7 @@ body, html {
 
 @media screen and (max-width: 629px) {
 body, html {
-	/*background-color: transparent;*/
+	/*background-color: transparent;
 }
 
 .social{
