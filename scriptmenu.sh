@@ -1,7 +1,7 @@
 #!/bin/bash
-OPCIONES="SO DB APP BKP"
+OPCIONES="SISTEMA-OPERATIVO DATABASE APPLICATION BACKUP RESTORE"
 select opt in $OPCIONES; do 
-	if [ "$opt" = "SO" ]; then 
+	if [ "$opt" = "SISTEMA-OPERATIVO" ]; then 
 		echo "Ejecutando primer Script..."
 			ACCION="AGREGAR ELIMINAR MODIFICAR"
 			select opt in $ACCION; do
@@ -38,7 +38,7 @@ select opt in $OPCIONES; do
 			done
 		exit
 	fi
-	if [ "$opt" = "DB" ]; then
+	if [ "$opt" = "DATABASE" ]; then
 		ACCION="CREATE-USER DELETE-USER MODIFY-USER"
 		select opt in $ACCION; do
 			if [ "$opt" = "CREATE-USER" ]; then
@@ -96,7 +96,7 @@ select opt in $OPCIONES; do
 			fi
 		done
 	fi
-	if [ "$opt" = "APP" ]; then
+	if [ "$opt" = "APPLICATION" ]; then
 		ACCION="RESERVAS TRASLADOS"
 		select opt in $ACCION; do
 				read -p "Ingrese host desde el cual se esta comunicando: " HOST
@@ -116,13 +116,86 @@ select opt in $OPCIONES; do
 		done
 	exit
 	fi
-	if [ "$opt" = "BKP" ]; then
+	if [ "$opt" = "BACKUP" ]; then
+		ACCION="DATABASE APP SERVER-CONFIG REMOTO"
+		select opt in $ACCION; do
+
+			if [ "$opt" = "DATABASE" ]; then
 		read -p "Ingrese el nombre de usuario DBA: " DBA_USER
 		read -sp "Ingrese password DBA: " DBA_PSSWD
-	 	mysqldump -u $DBA_USER -p$DBA_PSSWD Hotel | gzip -c > /home/fakearch/proyecto2020/backup_hotel/hotel.`date +%F`.sql.gz
-		echo "Creating backup..."	
-		echo "Backup created."
+				
+	 			mysqldump -u $DBA_USER -p$DBA_PSSWD Hotel  > /home/binop/backup_all/backup_db/backup_db.`date +%F`.sql
+				echo "Creating backup..."	
+					if [ $?==0 ]; then 
+						echo "Backup created."
+					exit
+					fi
+				exit
+			fi
+			if [ "$opt" = "SERVER-CONFIG" ]; then 
+				tar -zcvf /home/binop/backup_all/backup_so/backup_so.`date +%F`.taz.gz /etc/
+			exit
+			fi
+			if [ "$opt" = "APP" ]; then 
+				tar -zcvf /home/binop/backup_all/backup_app/backup_app.`date +%F`.taz.gz /home/binop/public_html/			
+
+			exit
+			fi
+			if [ "$opt" = "REMOTO" ]; then
+				rsync -avzh /home/binop/backup_all/* /home/binop/backup_remoto
+			exit
+			fi
+		done
 		exit
+		
+	fi
+	if [ "$opt" = "RESTORE" ]; then 
+		ACCION="DATABASE APP SERVER-CONFIG"
+		select opt in $ACCION; do
+			if [ "$opt" = "DATABASE" ]; then 
+				ACCION="RESTORE-IN-DB-TEST RESTORE-IN-DB-DEFINITIVE"
+				select opt in $ACCION; do
+				if [ "$opt" = "RESTORE-IN-DB-TEST" ]; then
+					read -p "Ingrese el nombre de usuario DBA: " DBA_USER
+					read -sp "Ingrese password DBA: " DBA_PSSWD
+					read -p "Ingrese nombre de archivo de respaldo (sin formato .gz): " DB_RESTORE
+					mysql -h localhost -u $DBA_USER -p$DBA_PSSWD --database test -e "source /home/binop/backup_all/backup_db/$DB_RESTORE"
+					exit
+				fi
+				if [ "$opt" = "RESTORE-IN-DB-DEFINITIVE" ]; then
+					read -p "Ingrese el nombre de usuario DBA: " DBA_USER
+					read -sp "Ingrese password DBA: " DBA_PSSWD
+					read -p "Ingrese nombre de archivo de respaldo (sin formato .gz): " DB_RESTORE
+					read -p "Esta accion no podra revertirse, desea continuar? y/n " CONFIRM
+						if [ $CONFIRM = "y" ]; then
+					    echo "Restaurando base de datos..."		
+							 mysql -u $DBA_USER -p$DBA_PSSWD  < /home/binop/backup_all/backup_db/$DB_RESTORE
+							echo "Restauracion completada"
+							exit
+						fi
+					    if [ $CONFIRM = "n" ]; then
+							echo "Accion cancelada"
+						exit
+						fi
+				exit
+				fi
+			done
+			exit
+			fi
+			if [ "$opt" = "APP" ]; then
+				read -p "Ingrese fecha del archivo a restaurar (en formato YYYY-MM-DD): " DATE
+				tar -xzvf /home/binop/backup_all/backup_app/backup_app.$DATE.taz.gz -C /home/binop/
+				echo "Se restauro la carpeta public_html en /home/binop/home/binop/public_html"
+
+			exit
+			fi
+			if [ "$opt" = "SERVER-CONFIG" ]; then
+				read -p "Ingrese fecha del archivo a restaurar (en formato YYYY-MM-DD): " DATE
+				tar -xzvf /home/binop/backup_all/backup_so/backup_so.$DATE.taz.gz -C /etc/
+				exit
+			fi
+		done
+	exit
 	fi
 done
 
