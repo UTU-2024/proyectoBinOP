@@ -1,0 +1,3 @@
+Tipo_de_Habitacion	Nombre	Cantidad_de_mascotas	Dia_de_la_reserva
+Suite	Juan	3	2020-11-20
+Estandar	Pedro	1	2020-11-20
