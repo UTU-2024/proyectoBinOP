@@ -1,0 +1,7 @@
+  0 2 10,20,30 * -     tar -zcvf /home/binop/backup_all/backup_so/backup_so.`date +%F`.taz.gz /etc/ 
+  0 2 10,20,30 * -   tar -zcvf /home/binop/backup_all/backup_app/backup_app.`date +%F`.taz.gz /home/binop/public_html/
+  0 2 10,20,30 * -   mysqldump -u dba -pdba2020 Hotel > /home/binop/backup_all/backup_db/backup_db.`date +%F$`.sql
+  0 0 * * *          rsync -azvh /etc/ /home/binop/backup_all/backup_so/
+  0 0 * * *          rsync -azvh /home/binop/public_html/ /home/binop/backup_all/backup_app/
+  0 0 * * *          mysql -u dba -pdba2020 Hotel > /home/binop/backup_all/backup_db/
+
